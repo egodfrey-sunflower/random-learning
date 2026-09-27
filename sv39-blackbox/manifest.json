@@ -1,0 +1,27 @@
+{
+  "physical_base": "0x80000000",
+  "physical_size": 2097152,
+  "page_size": 4096,
+  "processes": [
+    {
+      "pid": 17,
+      "name": "courier",
+      "state": "RUNNING",
+      "satp": "0x80000000000800a5"
+    },
+    {
+      "pid": 9,
+      "name": "courier.old",
+      "state": "ZOMBIE",
+      "satp": "0x8000000000080048"
+    }
+  ],
+  "entry_va": "0x40100ff0",
+  "record_magic": "0x314b43414c42564d",
+  "expected_records": 7,
+  "protected_addresses": {
+    "guard": "0x400ff000",
+    "trampoline": "0x3ffffff000"
+  },
+  "format": "Sv39, little-endian, 4 KiB leaf mappings only"
+}
