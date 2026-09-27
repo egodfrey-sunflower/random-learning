@@ -1,0 +1,48 @@
+{
+  "title": "FD HEIST: The last writer",
+  "version": 1,
+  "initial_pid": 40,
+  "initial_image": "launcher",
+  "initial_fds": {
+    "0": "console-input",
+    "1": "console-output",
+    "2": "console-output"
+  },
+  "fd_limit": 16,
+  "pipe_capacity": 512,
+  "files": {
+    "/vault/reel.bin": "images/reel.bin",
+    "/vault/pad.bin": "images/pad.bin"
+  },
+  "trace": "trace.jsonl",
+  "capture": {
+    "pid": 43,
+    "fd": 0,
+    "rule": "Concatenate the bytes returned by all completed reads on this descriptor, in trace order."
+  },
+  "halt": {
+    "after_seq": 103,
+    "blocked_call": {
+      "pid": 43,
+      "op": "read",
+      "fd": 0,
+      "n": 64
+    },
+    "other_live_processes": [
+      {
+        "pid": 45,
+        "state": "sleeping; no further I/O planned"
+      }
+    ]
+  },
+  "repair": {
+    "operation": "close",
+    "count": 1,
+    "when": "At the halt, in a live process other than the receiver; make its blocked read return EOF."
+  },
+  "envelope": {
+    "magic_ascii": "FDHEIST1",
+    "layout": "magic[8], n:u32le, ciphertext[n], pad[n], plaintext_crc32:u32le",
+    "decode": "plaintext[j] = ciphertext[j] XOR pad[j]"
+  }
+}

@@ -1,0 +1,103 @@
+{"seq": 1, "pid": 40, "op": "open", "path": "/vault/reel.bin"}
+{"seq": 2, "pid": 40, "op": "read", "fd": 3, "n": 19, "dst": "seed", "ret": 19}
+{"seq": 3, "pid": 40, "op": "dup", "fd": 3}
+{"seq": 4, "pid": 40, "op": "pipe"}
+{"seq": 5, "pid": 40, "op": "pipe"}
+{"seq": 6, "pid": 40, "op": "fork", "child": 41}
+{"seq": 7, "pid": 40, "op": "fork", "child": 42}
+{"seq": 8, "pid": 40, "op": "fork", "child": 43}
+{"seq": 9, "pid": 40, "op": "fork", "child": 44}
+{"seq": 10, "pid": 40, "op": "close", "fd": 5}
+{"seq": 11, "pid": 40, "op": "close", "fd": 7}
+{"seq": 12, "pid": 40, "op": "close", "fd": 8}
+{"seq": 13, "pid": 40, "op": "read", "fd": 4, "n": 7, "dst": "seed", "ret": 7}
+{"seq": 14, "pid": 40, "op": "open", "path": "/vault/reel.bin"}
+{"seq": 15, "pid": 40, "op": "read", "fd": 5, "n": 11, "dst": "audit", "ret": 11}
+{"seq": 16, "pid": 40, "op": "close", "fd": 5}
+{"seq": 17, "pid": 41, "op": "close", "fd": 5}
+{"seq": 18, "pid": 41, "op": "close", "fd": 7}
+{"seq": 19, "pid": 41, "op": "close", "fd": 8}
+{"seq": 20, "pid": 41, "op": "close", "fd": 0}
+{"seq": 21, "pid": 41, "op": "dup", "fd": 4}
+{"seq": 22, "pid": 41, "op": "close", "fd": 3}
+{"seq": 23, "pid": 41, "op": "close", "fd": 4}
+{"seq": 24, "pid": 41, "op": "exec", "image": "sender"}
+{"seq": 25, "pid": 41, "op": "open", "path": "/vault/pad.bin"}
+{"seq": 26, "pid": 41, "op": "read", "fd": 3, "n": 37, "dst": "discard", "ret": 37}
+{"seq": 27, "pid": 41, "op": "dup", "fd": 3}
+{"seq": 28, "pid": 42, "op": "close", "fd": 3}
+{"seq": 29, "pid": 42, "op": "close", "fd": 4}
+{"seq": 30, "pid": 42, "op": "close", "fd": 6}
+{"seq": 31, "pid": 42, "op": "close", "fd": 7}
+{"seq": 32, "pid": 42, "op": "close", "fd": 0}
+{"seq": 33, "pid": 42, "op": "dup", "fd": 5}
+{"seq": 34, "pid": 42, "op": "close", "fd": 5}
+{"seq": 35, "pid": 42, "op": "close", "fd": 1}
+{"seq": 36, "pid": 42, "op": "dup", "fd": 8}
+{"seq": 37, "pid": 42, "op": "close", "fd": 8}
+{"seq": 38, "pid": 42, "op": "write", "fd": 1, "src": "seed", "start": 7, "n": 12, "ret": 12}
+{"seq": 39, "pid": 42, "op": "write", "fd": 1, "src": "seed", "start": 0, "n": 7, "ret": 7}
+{"seq": 40, "pid": 42, "op": "exec", "image": "relay"}
+{"seq": 41, "pid": 43, "op": "close", "fd": 3}
+{"seq": 42, "pid": 43, "op": "close", "fd": 4}
+{"seq": 43, "pid": 43, "op": "close", "fd": 5}
+{"seq": 44, "pid": 43, "op": "close", "fd": 6}
+{"seq": 45, "pid": 43, "op": "close", "fd": 8}
+{"seq": 46, "pid": 43, "op": "close", "fd": 0}
+{"seq": 47, "pid": 43, "op": "dup", "fd": 7}
+{"seq": 48, "pid": 43, "op": "close", "fd": 7}
+{"seq": 49, "pid": 43, "op": "exec", "image": "receiver"}
+{"seq": 50, "pid": 43, "op": "read", "fd": 0, "n": 8, "dst": "input", "ret": 8}
+{"seq": 51, "pid": 43, "op": "read", "fd": 0, "n": 64, "dst": "input", "ret": 11}
+{"seq": 52, "pid": 44, "op": "close", "fd": 3}
+{"seq": 53, "pid": 44, "op": "close", "fd": 4}
+{"seq": 54, "pid": 44, "op": "close", "fd": 5}
+{"seq": 55, "pid": 44, "op": "close", "fd": 6}
+{"seq": 56, "pid": 44, "op": "close", "fd": 7}
+{"seq": 57, "pid": 44, "op": "dup", "fd": 8}
+{"seq": 58, "pid": 44, "op": "close", "fd": 8}
+{"seq": 59, "pid": 44, "op": "close", "fd": 1}
+{"seq": 60, "pid": 44, "op": "open", "path": "/vault/reel.bin"}
+{"seq": 61, "pid": 44, "op": "exec", "image": "archive-helper"}
+{"seq": 62, "pid": 44, "op": "read", "fd": 1, "n": 23, "dst": "log", "ret": 23}
+{"seq": 63, "pid": 44, "op": "write", "fd": 2, "src": "log", "start": 0, "n": 23, "ret": 23}
+{"seq": 64, "pid": 44, "op": "fork", "child": 45}
+{"seq": 65, "pid": 44, "op": "exit", "status": 0}
+{"seq": 66, "pid": 45, "op": "exec", "image": "archive-daemon"}
+{"seq": 67, "pid": 45, "op": "read", "fd": 1, "n": 9, "dst": "log", "ret": 9}
+{"seq": 68, "pid": 45, "op": "write", "fd": 2, "src": "log", "start": 0, "n": 9, "ret": 9}
+{"seq": 69, "pid": 41, "op": "read", "fd": 0, "n": 17, "dst": "a", "ret": 17}
+{"seq": 70, "pid": 40, "op": "read", "fd": 3, "n": 9, "dst": "b", "ret": 9}
+{"seq": 71, "pid": 40, "op": "write", "fd": 6, "src": "b", "start": 0, "n": 9, "ret": 9}
+{"seq": 72, "pid": 41, "op": "write", "fd": 6, "src": "a", "start": 0, "n": 6, "ret": 6}
+{"seq": 73, "pid": 41, "op": "write", "fd": 6, "src": "a", "start": 6, "n": 11, "ret": 11}
+{"seq": 74, "pid": 42, "op": "read", "fd": 0, "n": 20, "dst": "a", "ret": 20}
+{"seq": 75, "pid": 42, "op": "read", "fd": 0, "n": 64, "dst": "b", "ret": 6}
+{"seq": 76, "pid": 42, "op": "write", "fd": 1, "src": "a", "start": 6, "n": 14, "ret": 14}
+{"seq": 77, "pid": 42, "op": "write", "fd": 1, "src": "b", "start": 0, "n": 6, "ret": 6}
+{"seq": 78, "pid": 42, "op": "write", "fd": 1, "src": "a", "start": 0, "n": 6, "ret": 6}
+{"seq": 79, "pid": 43, "op": "read", "fd": 0, "n": 13, "dst": "input", "ret": 13}
+{"seq": 80, "pid": 43, "op": "read", "fd": 0, "n": 64, "dst": "input", "ret": 13}
+{"seq": 81, "pid": 41, "op": "read", "fd": 4, "n": 23, "dst": "a", "ret": 23}
+{"seq": 82, "pid": 40, "op": "read", "fd": 4, "n": 5, "dst": "discard", "ret": 5}
+{"seq": 83, "pid": 40, "op": "read", "fd": 3, "n": 14, "dst": "b", "ret": 14}
+{"seq": 84, "pid": 41, "op": "write", "fd": 6, "src": "a", "start": 0, "n": 23, "ret": 23}
+{"seq": 85, "pid": 40, "op": "write", "fd": 6, "src": "b", "start": 0, "n": 14, "ret": 14}
+{"seq": 86, "pid": 42, "op": "read", "fd": 0, "n": 12, "dst": "a", "ret": 12}
+{"seq": 87, "pid": 42, "op": "read", "fd": 0, "n": 64, "dst": "b", "ret": 25}
+{"seq": 88, "pid": 42, "op": "write", "fd": 1, "src": "b", "start": 0, "n": 25, "ret": 25}
+{"seq": 89, "pid": 42, "op": "write", "fd": 1, "src": "a", "start": 0, "n": 12, "ret": 12}
+{"seq": 90, "pid": 43, "op": "read", "fd": 0, "n": 31, "dst": "input", "ret": 31}
+{"seq": 91, "pid": 43, "op": "read", "fd": 0, "n": 64, "dst": "input", "ret": 6}
+{"seq": 92, "pid": 41, "op": "read", "fd": 3, "n": 21, "dst": "a", "ret": 21}
+{"seq": 93, "pid": 40, "op": "read", "fd": 4, "n": 17, "dst": "b", "ret": 17}
+{"seq": 94, "pid": 41, "op": "write", "fd": 6, "src": "a", "start": 0, "n": 21, "ret": 21}
+{"seq": 95, "pid": 40, "op": "write", "fd": 6, "src": "b", "start": 0, "n": 17, "ret": 17}
+{"seq": 96, "pid": 41, "op": "exit", "status": 0}
+{"seq": 97, "pid": 40, "op": "exit", "status": 0}
+{"seq": 98, "pid": 42, "op": "read", "fd": 0, "n": 64, "dst": "tail", "ret": 38}
+{"seq": 99, "pid": 42, "op": "write", "fd": 1, "src": "tail", "start": 29, "n": 9, "ret": 9}
+{"seq": 100, "pid": 42, "op": "write", "fd": 1, "src": "tail", "start": 0, "n": 29, "ret": 29}
+{"seq": 101, "pid": 42, "op": "exit", "status": 0}
+{"seq": 102, "pid": 43, "op": "read", "fd": 0, "n": 7, "dst": "input", "ret": 7}
+{"seq": 103, "pid": 43, "op": "read", "fd": 0, "n": 64, "dst": "input", "ret": 31}
